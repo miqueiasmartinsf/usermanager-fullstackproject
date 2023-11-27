@@ -42,6 +42,8 @@ class userRepositories {
 
     update(userData, id) {
         const query = "UPDATE users SET ? WHERE id = ?";
+        console.log(userData);
+        console.log(id);
         return new Promise((resolve, reject) => {
             connection.query(query, [userData, id], (error, result) => {
                 if (error) {
